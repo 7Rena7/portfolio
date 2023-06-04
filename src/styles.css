@@ -1,1 +1,392 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+/* ALL */
+
+:root {
+  --text-color: rgb(237, 240, 241);
+  --text-color-dark: rgb(37, 36, 34);
+  --text-color-hover: rgb(159, 160, 161);
+  --text-color-accent: rgb(189, 191, 193);
+  --accent: rgb(235, 94, 40);
+  --accent-hover: rgba(235, 94, 40);
+  --accent-selection: rgba(235, 94, 40, 0.8);
+  --background-dark: rgb(37, 36, 34);
+  --background-light: rgb(255, 252, 242);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--background-dark);
+}
+
+.section-even {
+  background-color: var(--background-light);
+}
+
+.section-odd {
+  background-color: var(--background-dark);
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+a,
+figcaption {
+  font-size: 22px;
+}
+
+.btn,
+.btn-secondary {
+  padding: 0.6rem 2rem;
+  margin-right: 1rem;
+  font-size: 20px;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.btn a {
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+  box-shadow: 0 0 15px var(--accent-hover);
+}
+
+.btn-terciary {
+  padding: 0.5rem 0.8rem;
+  margin-right: 1rem;
+  font-size: 20px;
+  background-color: var(--background-dark);
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-terciary:hover {
+  box-shadow: 0 0 20px var(--accent-hover);
+}
+
+::selection {
+  background-color: var(--accent-selection);
+}
+
+/* MAIN SECTION */
+
+/* ABOUT */
+
+.about {
+  width: 80%;
+  min-height: 95vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.about-info p {
+  max-width: 500px;
+}
+
+.about-info p a {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-info p a:hover {
+  color: var(--accent);
+}
+
+.about-img img {
+  max-width: 300px;
+}
+
+/* PROJECTS */
+
+.projects {
+  width: 80%;
+  padding-bottom: 10rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projects h2,
+.flex-container h3,
+.flex-container h3 i,
+.flex-container p,
+.flex-container p strong {
+  color: var(--text-color-dark);
+}
+
+.projects h2 {
+  margin: 5rem auto;
+}
+
+.project-card p {
+  max-width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7rem;
+  column-gap: 4rem;
+}
+
+.flex-container > * {
+  min-width: 40%;
+}
+
+.project-card p a i strong {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-card p a i strong:hover {
+  color: var(--accent);
+}
+
+.project-card button a {
+  width: 100%;
+}
+
+/* STACK */
+
+.stack {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 60vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.stack h2 {
+  margin: 5rem auto;
+}
+
+.tech-card {
+  background-color: var(--background-light);
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.5rem 3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+  gap: 5rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-item > img {
+  width: 5.5rem;
+  height: 5.5rem;
+  object-fit: fill;
+}
+
+.tech-item figcaption {
+  color: var(--text-color-dark);
+  padding-top: 1rem;
+}
+
+/* FOOTER */
+
+.footer {
+  align-items: center;
+  padding: 0 10% 30px 10%;
+  margin-top: 70px;
+}
+
+.footer__container {
+  max-width: 1500px;
+  margin: auto;
+  /* background-color: red; */
+}
+
+.footer__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__col {
+  width: 25%;
+}
+
+.footer__col h4 {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.footer__col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: var(--accent);
+  height: 2px;
+  box-sizing: border-box;
+  width: 30%;
+}
+
+.footer__col ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.footer__col ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer__col ul li a:hover {
+  color: var(--text-color-hover);
+  padding-left: 8px;
+}
+
+.footer__col ul {
+  list-style: none;
+}
+
+.footer__col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.footer__col .social-links a:hover {
+  background-color: var(--accent);
+}
+
+/* CREDITS */
+
+.credits {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+.credits p {
+  font-size: 12px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1100px) {
+  h2 {
+    font-size: 28px;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .btn,
+  .btn-secondary {
+    margin-bottom: 1rem;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .about {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 4rem;
+  }
+
+  .about-img img {
+    max-width: 200px;
+    padding: 2rem 0;
+  }
+
+  #linkedIn-about {
+    margin-left: 30%;
+  }
+
+  .projects,
+  .contact-box {
+    padding-bottom: 4rem;
+  }
+
+  .contact-box {
+    min-height: 40vh;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .tech-card {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer {
+    display: none;
+  }
+}
